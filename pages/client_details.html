@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WESP | Client Details</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/pages/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/pages/css/header.css">
+    <link rel="stylesheet" href="/pages/css/skins/skin-black.min.css">
+
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="/pages/css/google_font.css">
+
+    <!-- Import JQuery and load header to enable sidebar load by bodytag -->
+    <script src="/pages/js/jquery.js"></script>
+
+    <!-- Page specific scripts -->
+    <script type="text/javascript" src="/pages/js/gstatic_loader.js"></script>
+    <script type="text/javascript" src="../plugins/date.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/client_details.js"></script>
+
+    <!-- Page specific style -->
+    <style>
+        .page-header p {
+            display: inline !important;
+        }
+
+        #dashboard_div {
+            margin-bottom: 50px;
+        }
+
+        #client_details {
+            font-size: 16px;
+            margin-top: 80px;
+        }
+        
+        .links{
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body class="skin-black sidebar-mini" onload="load_essentials();">
+    <div class="wrapper">
+
+        <!-- Main Header Filled by JS -->
+        <header class="main-header">
+            <div id="header"></div>
+        </header>
+        <!-- Left side column. contains the logo and sidebar Filled by JS -->
+        <aside class="main-sidebar">
+            <div id="sidebar"></div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Client Details
+                    <small id="client_header">192.168.1.X</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li><a href="/pages/all_clients.html"><i class="fa fa-desktop"></i> All Clients</a></li>
+                    <li class="active">Here</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content container-fluid">
+
+
+
+                <!-- Main content -->
+                <section class="invoice">
+                    <!-- title row -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2 class="page-header">
+                                <i class="fa fa-desktop"></i>
+                                <p id="client_headline">192.168.1.X</p>
+                                <small class="pull-right" id="last_update">Last Update: </small>
+                            </h2>
+                        </div>
+                        
+                        <!-- /.col -->
+                        <div class="col-sm-2 invoice-col">
+                            <div id="client_details">
+                                <b><u>Latest Data</u></b>
+                                <br>
+                                <br>
+                                <br>
+                                <!-- will be filled by JS -->
+                            </div>
+                        </div>
+
+                        <div class="col-sm-10">
+                            <!--Div that will hold the dashboard-->
+                            <div id="dashboard_div">
+                                <!--Divs that will hold each control and chart-->
+                                <div id="chart_div"></div>
+                                <div id="control_div"></div>
+                            </div>
+                        </div>
+                                                
+                        <div class="col-sm-4 links">
+                            <a id="historyLink" href="set_in_js"> Show detailed History</a>
+                        </div>
+                                                
+                        <div class="col-sm-4 links">
+                            <a id="liveLink" href="set_in_js"> Show Live Report</a>
+                        </div>
+                        
+                        <div class="col-sm-4 links">
+                            <a id="tableLink" href="set_in_js"> Show data as Table</a>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+
+                    <!-- /.row -->
+                </section>
+                <!-- /.content -->
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Header Filled by JS -->
+        <footer class="main-footer">
+            <div id="footer"></div>
+        </footer>
+
+        <!-- Right Control Sidebar Filled by JS-->
+        <aside class="control-sidebar control-sidebar-dark">
+            <div id="sidebar_right"></div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED JS SCRIPTS -->
+
+    <!-- jQuery 3 -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+
+    <!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+
+</html>

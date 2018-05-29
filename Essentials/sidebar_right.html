@@ -1,0 +1,80 @@
+<!-- Create the tabs -->
+<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+    <li class="active"><a href="#control-sidebar-db-settings-tab" data-toggle="tab"><i class="fa fa-database"></i></a></li>
+    <li><a href="#control-sidebar-general-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+    
+    <!-- General Settings tab content -->
+    <div class="tab-pane" id="control-sidebar-general-settings-tab">
+        <form method="post">
+            <h3 class="control-sidebar-heading">General Settings</h3>
+
+            <div class="input-group margin width">
+                <input type="text" placeholder="WLC IP (Default: 192.168.1.240)" id="wlc_address" class="form-control settings_input">
+                <input type="text" placeholder="Mac or IP Column (Default: Client Mac Address)" id="client_identification_column" class="form-control settings_input">
+                
+            </div>
+            <span class="input-group-btn">
+                  <button type="button" id="save_general_button" class="btn btn-info btn-flat save_button">Save</button>
+            </span>
+            <p id="general_response_text"></p>
+            <!-- /.form-group -->
+        </form>
+    </div>
+
+    <!-- DB Settings tab content -->
+    <div class="tab-pane active" id="control-sidebar-db-settings-tab">
+        <form method="post">
+            <h3 class="control-sidebar-heading">Database Settings</h3>
+
+            <div class="input-group margin width">
+                <input type="text" placeholder="IP address (Default: 127.0.0.1)" id="db_address" class="form-control settings_input">
+                <input type="text" placeholder="Port (Default: 3334)" id="db_port" class="form-control settings_input">
+                <input type="text" placeholder="DB user (Default: root)" id="db_user" class="form-control settings_input">
+                <input type="text" placeholder="DB password (Default: root)" id="db_password" class="form-control settings_input">
+                <input type="text" placeholder="Name of DB (Default: WESP)" id="db_name" class="form-control settings_input">
+                <input type="text" placeholder="Table Name (Default: data)" id="db_table" class="form-control settings_input">
+
+            </div>
+            <span class="input-group-btn">
+                  <button type="button" id="save_db_button" class="btn btn-info btn-flat save_button">Save</button>
+            </span>
+            <p id="db_response_text"></p>
+            <!-- /.form-group -->
+        </form>
+    </div>
+    <!-- /.tab-pane -->
+</div>
+
+<!-- Page specific scripts -->
+<script src="/Essentials/sidebar_right.js"></script>
+
+<style>
+    .control-sidebar-heading {
+        margin-left: 10px !important;
+    }
+
+    .settings_input {
+        margin-bottom: 10px !important;
+        width: 100% !important;
+    }
+
+    .save_button {
+        float: left;
+
+        margin-left: 10px !important;
+    }
+    
+    .width {
+        width: 90% !important;
+    }
+
+    #response_text {
+        margin-left: 10px !important;
+        margin-top: 10px !important;
+        font-size: 15px !important;
+    }
+
+</style>

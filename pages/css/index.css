@@ -1,0 +1,54 @@
+.post_table {
+
+    border: 1px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.mac_address {
+    font-size: 20px;
+}
+
+.piechartheader {
+    text-align: center !important;
+}
+
+
+/* Tooltip text */
+
+#ssh_headbox .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+    /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+#ssh_headbox .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+#ssh_headbox:hover .tooltiptext {
+    visibility: visible;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WESP | Calendar</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css">
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="../bower_components/fullcalendar/dist/fullcalendar.print.min.css" media="print">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/pages/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/pages/css/header.css">
+    <link rel="stylesheet" href="/pages/css/skins/skin-black.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="/pages/css/google_font.css">
+
+    <!-- Import JQuery and load header to enable sidebar load by bodytag -->
+    <script src="/pages/js/jquery.js"></script>
+
+    <!-- Page specific scripts -->
+    <script src="js/helper.js"></script>
+    <script src="js/calendar.js"></script>
+
+    <!-- Page specific styles -->
+    <style>
+        .fc-event {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body class="skin-black sidebar-mini" onload="load_essentials();">
+    <div class="wrapper">
+
+        <!-- Main Header Filled by JS -->
+        <header class="main-header">
+            <div id="header"></div>
+        </header>
+        <!-- Left side column. contains the logo and sidebar Filled by JS -->
+        <aside class="main-sidebar">
+            <div id="sidebar"></div>
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Calendar
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li class="active">Calendar</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+
+                    <!-- /.col -->
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+                            <div class="box-body no-padding">
+                                <!-- THE CALENDAR -->
+                                <div id="calendar"></div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /. box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Header Filled by JS -->
+        <footer class="main-footer">
+            <div id="footer"></div>
+        </footer>
+
+        <!-- Right Control Sidebar Filled by JS-->
+        <aside class="control-sidebar control-sidebar-dark">
+            <div id="sidebar_right"></div>
+        </aside>
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+        <div class="control-sidebar-bg"></div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 3 -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Slimscroll -->
+    <script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- fullCalendar -->
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+
+</body>
+
+</html>

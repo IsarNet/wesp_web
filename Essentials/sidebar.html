@@ -1,0 +1,64 @@
+<style>
+    /* Tooltip text */
+
+    #tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+        width: 200px;
+        top: 100%;
+        left: 50%;
+        margin-left: -100px;
+        /* Use half of the width (120/2 = 60), to center the tooltip */
+    }
+
+    #tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%;
+        /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+    /* Show the tooltip text when you mouse over the tooltip container */
+
+    #tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+</style>
+
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class=""><a href="/"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li class=""><a href="/pages/all_clients.html"><i class="fa fa-desktop"></i> <span>All Clients</span></a></li>
+        <li class=""><a href="/pages/calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
+        <li class=""><a href="/pages/table.html"><i class="fa fa-table"></i> <span>Table</span></a></li>
+        <li class="" id="tooltip"><a target="_blank" href="set_in_js" onclick="changePort(this);" id="ssh_sidebar"><i class="fa fa-table"></i> <span>SSH Console</span></a> <span class="tooltiptext">Ensure SSH server is running. <br> See <a href="/pages/help.html"> Help </a> for more details!</span></li>
+
+
+    </ul>
+    <!-- /.sidebar-menu -->
+</section>
+<!-- /.sidebar -->
+
+<script>
+    $(document).ready(function() {
+        document.getElementById('ssh_sidebar').setAttribute('href', ':2222/ssh/host/' + localStorage.getItem("wlc_ip"));
+    })
+
+</script>
