@@ -1,2 +1,78 @@
-# WESP_Web
-Ongoing not working, yet. Will be merged. Just ignore this stuff :-)
+# WESP Web
+
+This web application support the commandline tool WESP, which can be found [here](%https://github.com/IsarNet/wesp). 
+The idea behind WESP Web is the simple and elegant visualization of the data, created by WESP CLI. 
+Please note that in order to view the diagrams you need an active internet connection. 
+
+## Getting Started
+
+
+### Prerequisites
+
+To clone this repository git is required:
+
+On RHEL / CentOS systems:
+```
+sudo yum install git
+```
+On Debian / Ubuntu systems:
+```
+sudo apt-get install git
+```
+On Mac:
+```
+brew install git
+```
+<br />
+
+### Web Server
+Make sure you have a web server (e.g. apache) installed. 
+Otherwise the website cannot be served. Also ensure that PHP is installed to allow database connections.
+Here a few suggestions on how to install a web server on different OSs:
+
+-Ubuntu: [Apache](%https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
+
+-Debian: [LAMP](%https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-debian)
+
+-macOS: [MAMP](%https://www.mamp.info/de/)
+
+-Windows: [XAMPP](%https://www.apachefriends.org/de/index.html)
+
+Of course every other web server will do it as well.
+
+<br />
+
+### Installing
+Clone repository into the base folder of your server:
+```
+git clone https://github.com/IsarNet/wesp_web
+```
+
+To use the SSH feature of the website, start the SSH server:
+```
+cd WebSSH2
+```
+```
+npm start
+```
+
+<br />
+
+### Configuration
+1. Navigate to your web server using the IP and Port defined in the installation or in the settings of your server. 
+For example enter the link into a browser:
+```
+http://localhost:8888/wesp_web
+```
+
+2. You should see a site similar to this (If the site is not reachable check the settings of your web server again):
+![Homepage](img/doc_homepage.png)    
+
+3. Set the connection details to your database, using the sidebar 
+(if the connection fails ensure the database is reachable by your web server and PHP is installed properly):
+![Database Settings](img/doc_db_settings.png) 
+
+4. Hit Save and reload the page. If you have already data in your database it should now be displayed, which could look this:
+ ![Configuration done](img/doc_done.png) 
+
+5. Also have a look at the other options in the sidebar to change the IP address of your WLC or the column name to identify client by. 
