@@ -30,13 +30,13 @@ Make sure you have a web server (e.g. apache) installed.
 Otherwise the website cannot be served. Also ensure that PHP is installed to allow database connections.
 Here a few suggestions on how to install a web server on different OSs:
 
--Ubuntu: [Apache](%https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
+-Ubuntu: [Apache](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-16-04)
 
--Debian: [LAMP](%https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-debian)
+-Debian: [LAMP](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-debian)
 
--macOS: [MAMP](%https://www.mamp.info/de/)
+-macOS: [MAMP](https://www.mamp.info/de/)
 
--Windows: [XAMPP](%https://www.apachefriends.org/de/index.html)
+-Windows: [XAMPP](https://www.apachefriends.org/de/index.html)
 
 Of course every other web server will do it as well.
 
