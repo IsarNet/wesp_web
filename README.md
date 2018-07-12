@@ -48,6 +48,17 @@ Clone repository into the base folder of your server:
 git clone https://github.com/IsarNet/wesp_web
 ```
 
+Move everything into the base folder of your server:
+```
+mv wesp_web/* .
+```
+
+Optional: remove the old folder:
+```
+rm -R wesp_web
+```
+
+
 To use the SSH feature of the website, start the SSH server:
 ```
 cd WebSSH2
@@ -76,3 +87,50 @@ http://localhost:8888/wesp_web
  ![Configuration done](img/doc_done.png) 
 
 5. Also have a look at the other options in the sidebar to change the IP address of your WLC or the column name to identify client by. 
+
+<br />
+<br />
+
+### Troubleshoot
+#### No database connection possible, although the credentials are correct.
+Make sure the PHP (/PHP) files are executable and the config files (/PHP/config) are writable. Also check your firewall. 
+
+<br />
+
+#### No clients appear
+
+Check the response of:
+```
+http://localhost/PHP/listClients.php
+```
+If the reponse looks something like this:
+```
+#1 of SELECT list is not in GROUP BY clause and contains nonaggregated column
+```
+deactivate the mode “ONLY_FULL_GROUP_BY” by sending the following command to your mySQL instance:
+```
+SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+```
+
+If this did not fix the problem contact the author.
+
+<br />
+<br />
+
+## Authors
+
+* **Marcel Rummens** - *Initial work* - [Rummens](https://github.com/Rummens)
+ * **Maximilian Tichter** - *Initial work* - [Maxt2266](https://github.com/maxt2266)
+
+
+See also the list of [contributors](https://github.com/IsarNet/wesp/contributors) who participated in this project.
+
+<br />
+<br />
+
+## License
+
+This project is licensed under the GPL-3.0 License - see the [LICENSE.txt](LICENSE.txt) file for details
+
+<br />
+<br />
