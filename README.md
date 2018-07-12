@@ -73,27 +73,27 @@ npm start
 1. Navigate to your web server using the IP and Port defined in the installation or in the settings of your server. 
 For example enter the link into a browser:
 ```
-http://localhost:8888/wesp_web
+http://localhost:80/
 ```
 
 2. You should see a site similar to this (If the site is not reachable check the settings of your web server again):
 ![Homepage](img/doc_homepage.png)    
 
 3. Set the connection details to your database, using the sidebar 
-(if the connection fails ensure the database is reachable by your web server and PHP is installed properly):
+(if the connection fails have a look at the troubleshoot section):
 ![Database Settings](img/doc_db_settings.png) 
 
-4. Hit Save and reload the page. If you have already data in your database it should now be displayed, which could look this:
+4. Hit Save and reload the page. If you already have data in your database it should now be displayed, which could look this:
  ![Configuration done](img/doc_done.png) 
 
-5. Also have a look at the other options in the sidebar to change the IP address of your WLC or the column name to identify client by. 
+5. Also have a look at the other options in the sidebar to change the IP address of your WLC or the column name to identify clients by. 
 
 <br />
 <br />
 
 ### Troubleshoot
 #### No database connection possible, although the credentials are correct.
-Make sure the PHP (/PHP) files are executable and the config files (/PHP/config) are writable. Also check your firewall. 
+Ensure the database is reachable by your web server and PHP is installed properly. Also make sure the PHP (/PHP) files are executable and the config files (/PHP/config) are writable. Also check your firewall. 
 
 <br />
 
