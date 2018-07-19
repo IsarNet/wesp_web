@@ -103,11 +103,11 @@ Check the response of:
 ```
 http://localhost/PHP/listClients.php
 ```
-If the reponse looks something like this:
+If the response looks something like this:
 ```
 #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column
 ```
-deactivate the mode “ONLY_FULL_GROUP_BY” by sending the following command to your mySQL instance:
+deactivate the mode “ONLY_FULL_GROUP_BY” by sending the following command to your MySQL instance:
 ```
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 ```
